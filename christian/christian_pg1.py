@@ -15,7 +15,7 @@ while True:
     for i in range(4):
         nota = input(Fore.YELLOW + f"\nNota do {i+1}º Bimestre : ")
         while not (nota.replace('.', '', 1).isdigit() and 0 <= float(nota) <= 10):
-            print(Fore.YELLOW + "⚠️ Entrada inválida! Digite uma nota entre 0 e 10.")
+            print(Fore.YELLOW + "⚠️ Entrada inválida! Digite uma nota entre 0 e 10.\n")
             nota = input(Fore.YELLOW + f"Nota {i+1}: ")
         notas.append(float(nota))
         
