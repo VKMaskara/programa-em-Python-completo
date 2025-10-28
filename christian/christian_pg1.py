@@ -61,7 +61,7 @@ while True:
            
 
             print( Fore.YELLOW+ "\n\n👤 O aluno escolhido foi:")
-            print(  Fore.LIGHTBLACK_EX + f"\n\nAluno: {nome.upper()} | Média: {media:.2f} | Notas do 1º, 2º, 3º e 4º Bimestre : {', '.join(f'{n:.2f}' for n in notas)} | {situacao} 📊\n")
+            print(  Fore.LIGHTBLACK_EX + f"\n\n• Aluno: {nome.upper()} \n• Média: {media:.2f} \n• Notas do 1º, 2º, 3º e 4º Bimestre : {', '.join(f'{n:.2f}' for n in notas)} \n• Situação: {situacao} 📊\n")
             print(30*"__")
         else:
             print( Fore.RED + "❌ Número inválido. Tente novamente.")
