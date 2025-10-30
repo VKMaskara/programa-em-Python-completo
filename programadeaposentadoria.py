@@ -1,5 +1,6 @@
 from datetime import date
 from colorama import Fore, Style, init
+import os
 
 init(autoreset=True)  # Garante que a cor volte ao normal automaticamente
 
@@ -7,6 +8,7 @@ init(autoreset=True)  # Garante que a cor volte ao normal automaticamente
 pessoa = {}
 
 # Entrada de dados com cores
+os.system('cls')
 print(Fore.BLUE + "=== Cadastro de Pessoa ===" + Style.RESET_ALL)
 pessoa['Nome'] = input(Fore.GREEN + 'Nome: ' + Style.RESET_ALL)
 ano_nasc = int(input(Fore.GREEN + 'Ano de nascimento: ' + Style.RESET_ALL))
