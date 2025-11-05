@@ -43,15 +43,18 @@ def grafico_aproveitamento():
     plt.show()
 
 def grafico_jogador():
-        # Gerar gráfico de linha do aproveitamento de um jogador específico
-
-        jogador = tabela[int(busca)]
-        plt.plot(jogador['gols'], marker='o')
-        plt.title(f"Aproveitamento de Gols - {jogador['nome']}")
-        plt.xlabel("Partidas")
-        plt.ylabel("Gols")
-        plt.grid()
-        plt.show()
+    # Gerar gráfico de linha do aproveitamento de um jogador específico
+    jogador = tabela[int(busca)]
+    
+    # Eixo X será a contagem das partidas (1, 2, 3, ...)
+    eixo_x_partidas = range(1, len(jogador['gols']) + 1) 
+    
+    plt.plot(eixo_x_partidas, jogador['gols'], marker='o') # <--- MUDANÇA AQUI
+    plt.title(f"Aproveitamento de Gols - {jogador['nome']}")
+    plt.xlabel("Partidas")
+    plt.ylabel("Gols")
+    plt.grid()
+    plt.show()
 
 
 def tabela_jogadores():

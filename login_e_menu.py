@@ -10,6 +10,14 @@ usuario_correto = "kaique"
 senha_correta = "1245"
 tentativas_maximas = 3
 
+def limpar_tela():
+    """
+    Limpa a tela do terminal.
+    windows: cls
+    linux/mac: clear
+    """
+    print("\n" * 100)
+    os.system('cls' if os.name == 'nt' else 'clear') # Limpa a tela do terminal de acordo com o sistema operacional
 
 def fazer_cadastro():
     global usuario_correto, senha_correta
@@ -56,32 +64,36 @@ def programa_1():
         from Boletim_escolar import main
         main()
     except ImportError:
-        print("\n--- ERRO: Arquivo 'Boletim_escolar.py' não encontrado ---")
-        print("Certifique-se que o arquivo existe na mesma pasta")
+       print("\n "*2)
 
 def programa_2():
     try:
         from programaparajogardados import main
         main()
     except ImportError:
-        print("\n--- ERRO: Arquivo 'programaparajogardados.py' não encontrado ---")
-        print("Certifique-se que o arquivo existe na mesma pasta")
+        print("\n "*2)
 
 def programa_3():
     try:
         from programadeaposentadoria import main  # Mudei o nome baseado no seu menu
         main()
     except ImportError:
-        print("\n--- ERRO: Arquivo 'aposentadoria.py' não encontrado ---")
-        print("Certifique-se que o arquivo existe na mesma pasta")
+        print("\n "*2)
 
 def programa_4():
     try:
         from aproveitamento import main
         main()
     except ImportError:
-        print("\n--- ERRO: Arquivo 'aproveitamento.py' não encontrado ---")
-        print("Certifique-se que o arquivo existe na mesma pasta")
+        print("\n "*2)
+
+def programa_5():
+    try:
+        from pag5 import main
+        main()
+    except ImportError:
+        print("\n "*2)
+      
 
 def encerrar_programa():
     try:
@@ -97,6 +109,8 @@ def menu_de_programas():
     Menu mostrado logo após login bem-sucedido.
     Permite acessar 5 programas, fazer logout (voltar ao menu inicial) ou encerrar.
     """
+    limpar_tela()
+    limpar_tela()
     while True:
         print("\n====================================")
         print("         MENU DE PROGRAMAS          ")
@@ -106,7 +120,7 @@ def menu_de_programas():
         print("  2 - JOGO DO DADO")
         print("  3 - APOSENTADORIA")
         print("  4 - APROVEITAMENTO DE JOGADOR DE FUTEBOL")
-        print("  5 - Programa 5")
+        print("  5 - SISTEMA DE CADASTRO DE PESSOAS")
         print("  L - Logout (voltar para a tela inicial)")
         print("  E - Encerrar Programa")
 
